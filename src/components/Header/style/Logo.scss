@@ -1,0 +1,18 @@
+.logo {
+    font-weight: bold;
+    font-size: 2rem;
+
+    @media (max-width: 768px) {
+        --size--logo: 2.7rem; //48px
+        width: var(--size--logo);
+        height: var(--size--logo);
+        line-height: var(--size--logo);
+        font-size: 1.3rem;
+        text-align: center;
+        color: black;
+    }
+
+    @media (max-width: 200px) {
+        display: none;
+    }
+}

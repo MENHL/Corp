@@ -1,0 +1,48 @@
+.custom-menu.ant-menu-horizontal {
+    // 1. 去掉底部边框
+    border-bottom: none;
+
+    // 2. 高度固定为 60px，垂直居中
+    height: 60px;
+    line-height: 60px;
+
+    // 整体 flex 居中（覆盖 Ant Design 默认布局）
+    display: flex !important;
+
+    justify-content: center !important;
+    overflow: visible !important;
+
+    // 每个菜单项样式
+    .ant-menu-item {
+        line-height: 60px;
+        flex: 0 0 auto !important; // 按内容宽度，不伸缩
+        color: #999 !important; // 默认灰色
+        font-weight: bold; // 加粗
+        background: transparent !important; // 默认透明背景
+        transition: all 0.3s ease;
+
+        // 移除 Ant Design 的底部指示条（下划线）
+        &::after,
+        &:hover::after {
+            display: none !important;
+        }
+
+        // 悬停样式：灰色背景 + 黑色字体
+        &:hover {
+            color: #000 !important;
+        }
+
+        // 选中样式：黑色字体，背景透明
+        &.ant-menu-item-selected {
+            color: #000 !important;
+            background: transparent !important;
+
+        }
+    }
+
+    // 隐藏 Ant Design 的溢出折叠组件
+    .ant-menu-overflow,
+    .ant-menu-overflowed-submenu {
+        display: none !important;
+    }
+}

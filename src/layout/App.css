@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* 组合选择器，优先级足够覆盖默认样式 */
+.Hamburg.ant-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background-color: transparent;
+    /* 移除默认内边距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hamburg.ant-btn,
+.Hamburg.ant-btn:hover,
+.Hamburg.ant-btn:focus,
+.Hamburg.ant-btn:active,
+.Hamburg.ant-btn:focus-visible {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: transparent !important;
+}

@@ -1,0 +1,38 @@
+:root {
+  --bg--color: #e4e4e7;
+  /* 初始背景颜色 */
+  --bg-color01: #f3f3f3;
+  --bg-color02: #fafafa;
+  /* card颜色 */
+  --bg-card-color: #ffffff;
+
+  /* 主文字颜色 */
+  --font-color: #18191c;
+  /* 主按钮、激活态 */
+  --bt-color: #171A1C;
+
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  background-color: var(--bg-color01);
+}
