@@ -8,7 +8,6 @@ import Server from '../components/Home/h_Server'
 import Exhibition from '../components/Home/h_Exhibition'
 import Team from '../components/Home/h_Team'
 
-
 function Home() {
     return (
         <div id="home">
@@ -17,11 +16,11 @@ function Home() {
                 <Homs />
             </section>
             {/* 服务区域 */}
-            <div className="serve banner" >
+            <div className='serve banner'>
                 <Server />
             </div>
             {/*值得信赖的伙伴*/}
-            <div className='exhibition '>
+            <div className='exhibition banner'>
                 <Exhibition />
             </div>
             <div className='team banner'>

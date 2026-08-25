@@ -54,8 +54,6 @@ function App() {
 
   }
 
-  // 汉堡组件点击事件
-
   return (
     <Layout id='app' style={{ minHeight: '100vh' }}>
       {/* 头部 */}
