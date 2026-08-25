@@ -22,3 +22,23 @@
     outline: none !important;
     border-color: transparent !important;
 }
+
+/* 清楚底部默认样式 */
+.ant-layout-footer {
+    padding: 0;
+}
+
+/* 修改antd 样式覆盖  */
+#app .ant-layout-header.header {
+    height: 65px;
+    line-height: 65px;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+
+    .footer {
+        height: 400px;
+    }
+}

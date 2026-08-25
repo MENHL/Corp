@@ -1,5 +1,5 @@
 /**
- * 汉堡组件
+ * 汉堡按钮组件
  *
  */
 import './style/Hamburg.scss'

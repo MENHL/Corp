@@ -1,0 +1,73 @@
+.home_list {
+    margin-bottom: 100px;
+    width: 100%;
+    height: calc(100vh - 65px);
+    background-color: var(--bg-card-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    .text {
+        width: 150px;
+        height: 28px;
+        background: #efeff0;
+        font-size: 14px;
+        padding: 3px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1px;
+
+    }
+
+    // 大标题
+    .title {
+        font-size: clamp(2.5em, 4vw, 3.75em);
+        font-weight: bold;
+        letter-spacing: 4.5px;
+    }
+
+    // 副标题
+    .introduce {
+        font-size: clamp(12px, 2vw, 16px);
+        color: var(--font-color01);
+        letter-spacing: 2px;
+    }
+
+    // 按钮
+    .btn {
+        display: flex;
+        gap: 30px;
+
+        .realize,
+        .subscribe {
+            -webkit-tap-highlight-color: transparent;
+            width: 120px;
+            height: 45px;
+            font-size: clamp(14px, 2vw, 18px);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        // 左边按钮
+        .realize {
+            background-color: var(--font-color);
+            color: var(--bg-card-color)
+        }
+
+        // 右边按钮
+        .subscribe {
+            // padding: 5px;
+            border: 1px solid #efeff1;
+            color: var(--font-color);
+        }
+
+    }
+}

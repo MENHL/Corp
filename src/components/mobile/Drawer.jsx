@@ -1,8 +1,11 @@
-import { useState } from 'react';
 import { Drawer } from 'antd';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 function MobileDrawer({ open, onClose }) {
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [hoverKey, setHoverKey] = useState(null);
 
     const items = [
         { label: '首页', key: 'home' },
@@ -12,25 +15,51 @@ function MobileDrawer({ open, onClose }) {
         { label: '新闻', key: 'journalism' },
     ];
 
+    const getSelectedKey = () => {
+        const path = location.pathname;
+        const key = path.replace('/', '');
+        return key || 'home';
+    };
+
+    const selectedKey = getSelectedKey();
+
+    const handleItemClick = (key) => {
+        navigate(`/${key}`);
+        onClose();
+    };
+
     return (
         <Drawer
-            title="导航栏"
-            placement="right"
-            size={200}
+            title="Corp"
+            placement="top"
+            size={400}
             open={open}
             onClose={onClose}
             closable={{ placement: 'end' }}
         >
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                {items.map((item, index) => {
-                    const isActive = selectedIndex === index;
+                {items.map((item) => {
+                    const isActive = selectedKey === item.key;
+                    const isHovered = hoverKey === item.key;
+
+                    // 文字颜色：悬停且非激活 → 黑色，激活 → 白色，否则灰色
+                    const color = isHovered && !isActive ? 'black' : (isActive ? 'white' : 'gray');
+
+                    // 背景颜色：激活 → 黑色，悬停且非激活 → 浅灰色，否则透明
+                    let backgroundColor = 'transparent';
+                    if (isActive) {
+                        backgroundColor = 'black';
+                    } else if (isHovered) {
+                        backgroundColor = '#f5f5f5'; // 浅灰色，可根据喜好调整
+                    }
+
                     return (
                         <p
                             key={item.key}
                             style={{
                                 fontWeight: 'bold',
-                                color: isActive ? 'white' : 'gray',
-                                backgroundColor: isActive ? 'black' : 'transparent',
+                                color: color,
+                                backgroundColor: backgroundColor,
                                 cursor: 'pointer',
                                 margin: '4px 0',
                                 padding: '10px 16px',
@@ -38,7 +67,9 @@ function MobileDrawer({ open, onClose }) {
                                 fontSize: '16px',
                                 transition: 'all 0.2s ease',
                             }}
-                            onClick={() => setSelectedIndex(index)}
+                            onClick={() => handleItemClick(item.key)}
+                            onMouseEnter={() => setHoverKey(item.key)}
+                            onMouseLeave={() => setHoverKey(null)}
                         >
                             {item.label}
                         </p>

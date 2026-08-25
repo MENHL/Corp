@@ -1,20 +1,16 @@
 .custom-menu.ant-menu-horizontal {
+    --h-tall: 62px;
     // 1. 去掉底部边框
+    box-sizing: border-box; // 高度包含边框
     border-bottom: none;
-
-    // 2. 高度固定为 60px，垂直居中
-    height: 60px;
-    line-height: 60px;
-
-    // 整体 flex 居中（覆盖 Ant Design 默认布局）
+    // 2. 高度固定为 65px，垂直居中
+    height: var(--h-tall);
     display: flex !important;
-
     justify-content: center !important;
     overflow: visible !important;
 
     // 每个菜单项样式
     .ant-menu-item {
-        line-height: 60px;
         flex: 0 0 auto !important; // 按内容宽度，不伸缩
         color: #999 !important; // 默认灰色
         font-weight: bold; // 加粗
@@ -36,7 +32,6 @@
         &.ant-menu-item-selected {
             color: #000 !important;
             background: transparent !important;
-
         }
     }
 

@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.3.2",
     "antd": "^6.6.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-responsive": "^10.0.1",
+    "react-router-dom": "^7.18.2",
     "sass": "^1.103.1"
   },
   "devDependencies": {

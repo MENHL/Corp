@@ -1,0 +1,98 @@
+{
+    "hero": {
+        "text": "科技驱动·品牌可信",
+        "title": "用技术驱动业务增长",
+        "introduce": "专业·可信·高效—用克制而精致的设计语言传递企业专业度",
+        "buttons": [
+            {
+                "id": 1,
+                "label": "了解我们→",
+                "type": "primary"
+            },
+            {
+                "id": 2,
+                "label": "客户案例",
+                "type": "default"
+            }
+        ]
+    },
+    "services": {
+        "title": "我们的服务",
+        "subtitle": "从战略到落地，为企业提供完整的数字化解决方案",
+        "list": [
+            {
+                "id": 1,
+                "icon": "RadarChartOutlined",
+                "title": "技术咨询",
+                "description": "为企业提供从框架设计到技术选型的全流程咨询服务，助为数字化转型"
+            },
+            {
+                "id": 2,
+                "icon": "LayoutOutlined",
+                "title": "产品开发",
+                "description": "从需求分析到产品上线，提供端到端的软件开发与交付服务，确保高质量交付。"
+            },
+            {
+                "id": 3,
+                "icon": "LineChartOutlined",
+                "title": "数据智能",
+                "description": "基于大数据与AI技术，构建智能分析平台，让数据驱动业务决策与增长。"
+            }
+        ]
+    },
+    "partner": {
+        "title": "值得信赖的合作伙伴",
+        "list": [
+            "字节跳动",
+            "阿里巴巴",
+            "腾讯科技",
+            "网易科技"
+        ]
+    },
+    "team": {
+        "title": "关于Corp",
+        "subtitle": "技术驱动·值得信赖",
+        "descriptions": [
+            " NovaCorp成立于2020年，是一家以技术为核心的企业级软件服务商。我们相信，好的技术应该像基础设施一样——无声运转，可靠可信。",
+            "团队由来自一线科技公司的工程师、设计师和产品专家组成，累计服务超过200家企业客户，覆盖金融、医疗、教育、零售等行业。"
+        ],
+        "stats": [
+            {
+                "value": "200+",
+                "label": "企业客户"
+            },
+            {
+                "value": "50+",
+                "label": "团队成员"
+            },
+            {
+                "value": "5年+",
+                "label": "行业深耕"
+            }
+        ]
+    },
+    "gallery": {
+        "images": [
+            {
+                "id": 1,
+                "src": "../images/1.png",
+                "alt": "团队图片1"
+            },
+            {
+                "id": 2,
+                "src": "../images/2.png",
+                "alt": "团队图片2"
+            },
+            {
+                "id": 3,
+                "src": "../images/3.png",
+                "alt": "团队图片3"
+            },
+            {
+                "id": 4,
+                "src": "../images/4.png",
+                "alt": "团队图片4"
+            }
+        ]
+    }
+}

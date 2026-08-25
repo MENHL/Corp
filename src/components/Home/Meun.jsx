@@ -1,6 +1,6 @@
 // Menus.jsx
 import './style/Meun.scss'
-import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu } from 'antd';
 
 const items = [
@@ -12,18 +12,25 @@ const items = [
 ];
 
 const Menus = () => {
-    const [current, setCurrent] = useState('product');
-    const onClick = e => setCurrent(e.key);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    // 根据当前路径获取选中的 key（去掉开头的 '/'）
+    const currentKey = location.pathname.replace('/', '') || 'home';
+
+    const onClick = (e) => {
+        navigate(`/${e.key}`);   // 跳转到对应路径
+    };
 
     return (
         <Menu
             className="custom-menu "
             onClick={onClick}
-            selectedKeys={[current]}
+            selectedKeys={[currentKey]}   // 高亮当前项
             mode="horizontal"
             items={items}
         />
     );
-};
+}
 
 export default Menus;
