@@ -6,6 +6,7 @@ import './App.css'
 // PC端组件
 import Logo from '../components/Home/Logo'
 import Meun from '../components/Home/Meun'
+import Footers from '../components/footer/footer'
 //* 移动端组件 */
 import Hamburg from '../components/mobile/Hamburg'
 import MobileDrawer from '../components/mobile/Drawer'
@@ -57,8 +58,8 @@ function App() {
   return (
     <Layout id='app' style={{ minHeight: '100vh' }}>
       {/* 头部 */}
-      <Header className='header ' style={Headerstyle}>
-        <Row wrap={false} className='banner h-full  flex justify-between items-center' >
+      <Header className='header' style={Headerstyle}>
+        <Row wrap={false} className='banner f h-full  flex justify-between items-center' >
           {/* logo区域 */}
           <Col flex="100px">
             <Logo />
@@ -93,7 +94,9 @@ function App() {
       </Content>
       {/* 尾部 */}
       <Footer className='footer' style={Footerstyle}>
-        1231213
+        <div className='banner f '>
+          <Footers />
+        </div>
       </Footer>
     </Layout >
   )

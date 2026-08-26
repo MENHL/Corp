@@ -43,3 +43,7 @@ body {
 .banner {
   max-width: 1920px;
 }
+
+.f {
+  margin: 0 auto;
+}

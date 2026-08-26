@@ -1,5 +1,5 @@
 import './style/h_Team.scss';
-import teamData from '../../../public/data/homeData.json'; 
+import teamData from '../../../public/data/homeData.json';
 
 function Team() {
     // 从 teamData 中解构出 team 和 gallery

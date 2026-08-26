@@ -37,8 +37,4 @@
 #app {
     display: flex;
     flex-direction: column;
-
-    .footer {
-        height: 400px;
-    }
 }
