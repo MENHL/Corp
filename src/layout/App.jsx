@@ -42,6 +42,7 @@ function App() {
     padding: ' 0 30px',
     position: 'sticky',
     top: 0,
+    zIndex: 999,
     borderBottom: '3px solid #f3f3f3',
     backgroundColor: ' #ffffff',
 

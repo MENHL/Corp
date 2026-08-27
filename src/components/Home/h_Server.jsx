@@ -42,8 +42,11 @@ function HServer() {
                                 const Icon = iconMap[listItem.icon];
                                 return (
                                     <li className="s-r_item" key={listItem.id}>
-                                        <div className="li_list li_icon">
-                                            {Icon && <Icon />}
+                                        <div className="li_list ">
+                                            <div className="bg-li li_icon">
+                                                {Icon && <Icon />}
+                                            </div>
+
                                         </div>
                                         <div className="li_list li_title">{listItem.title}</div>
                                         <div className="li_list li_text">{listItem.description}</div>

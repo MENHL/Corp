@@ -46,9 +46,10 @@
                  background-color: var(--bg-card-color);
                  border-radius: 16px;
                  border: 1px solid var(--bg--color03);
-                 transition: box-shadow 0.3s ease;
+                 transition: transform 0.25s ease, box-shadow 0.25s ease;
 
                  &:hover {
+                     transform: translateY(-4px);
                      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); // 可根据设计调整
                  }
 
@@ -58,6 +59,14 @@
 
                  .li_list {
                      height: 33.333%;
+                     .bg-li {
+                         width: 60px;
+                         height: 60px;
+                         line-height: 60px;
+                         text-align: center;
+                         border-radius: 20%;
+                         background-color: var(--bg--color03);
+                     }
                  }
 
                  // 图标
