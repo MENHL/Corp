@@ -1,3 +1,88 @@
-.client {
-    // background-color: pink;
+.clients {
+    margin: 50px 0;
+    width: 100%;
+    height: auto;
+    display: -webkit-flex; // 旧 WebKit
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+
+    @media (max-width: 768px) {}
+
+    .argument {
+        width: 80%;
+        padding: 20px;
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        .item {
+            height: auto;
+            background-color: var(--bg-card-color);
+            height: clamp(115px, 20vw, 150px);
+            padding: 10px 20px;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+
+            display: -webkit-flex;
+            display: flex;
+            flex: 0 0 calc(50% - 10px);
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex: 0 0 calc(50% - 10px);
+
+            transition: box-shadow 0.3s ease;
+
+            &:hover {
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); // 可根据设计调整
+            }
+
+            @media (max-width: 768px) {
+                height: clamp(90px, 30vw, 115px);
+                -webkit-flex: 0 0 100%;
+                flex: 0 0 100%;
+            }
+
+            .title,
+            .introduce {
+                width: 100%;
+                height: 50%;
+                display: -webkit-box;
+                display: flex
+            }
+
+            .title {
+                font-weight: bold;
+                color: var(--font-color);
+                font-size: clamp(16px, 2vw, 18px);
+                letter-spacing: 2px;
+                align-items: center;
+            }
+
+            .introduce {
+
+                color: var(--font-color01);
+                font-size: clamp(13px, 1.8vw, 16px);
+                overflow: hidden;
+                //  溢出省略号
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
 }

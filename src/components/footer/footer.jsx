@@ -24,55 +24,65 @@ function f_Footer() {
 
     return (
         <div className="footer-box">
-            {/* 左侧品牌信息 */}
-            <div className="product-grid">
-                <div className="logo">
-                    <Logo />
-                </div>
+            <div className='f-cta1'>
+                <div className='title-h1'>找到合适你的技术解决方案</div>
+                <div className="title-h2">告诉我们你的业务挑战，我们的专家团队将在24小时内与你联系</div>
+                <ul className='btn'>
+                    <li className="realize">预约演示→</li>
+                    <li className='subscribe'>联系我们</li>
+                </ul>
 
-                <div className="title">
-                    用技术驱动业务
-                </div>
-                <div className="introduce">
-                    为企业提供全栈技术解决方案
-                </div>
-                <div className="icon">
-                    <WechatFilled />
-                    <SunFilled />
-                    <GithubFilled />
-                </div>
             </div>
-            <h1 className='h'></h1>
-            {/* 产品、公司、资源 三列 */}
-            <ul className="company-grid">
-                <ul className="product_list">
-                    <li className="title">产品</li>
-                    {products.map((item, index) => (
-                        <li key={index} className="grid">{item}</li>
-                    ))}
-                </ul>
-                <ul className="product_list">
-                    <li className="title">公司</li>
-                    {company.map((item, index) => (
-                        <li key={index} className="grid">{item}</li>
-                    ))}
-                </ul>
-                <ul className="product_list">
-                    <li className="title">资源</li>
-                    {resources.map((item, index) => (
-                        <li key={index} className="grid">{item}</li>
-                    ))}
-                </ul>
-            </ul>
+            <div className='f-cta2'>
+                <div className="product-grid">
+                    <div className="logo">
+                        <Logo />
+                    </div>
 
-            {/* 联系我们 */}
-            <ul className="relation_grid">
+                    <div className="title">
+                        用技术驱动业务
+                    </div>
+                    <div className="introduce">
+                        为企业提供全栈技术解决方案
+                    </div>
+                    <div className="icon">
+                        <WechatFilled />
+                        <SunFilled />
+                        <GithubFilled />
+                    </div>
+                </div>
+                {/* 产品、公司、资源 三列 */}
+                <ul className="company-grid">
+                    <ul className="product_list">
+                        <li className="title">产品</li>
+                        {products.map((item, index) => (
+                            <li key={index} className="grid">{item}</li>
+                        ))}
+                    </ul>
+                    <ul className="product_list">
+                        <li className="title">公司</li>
+                        {company.map((item, index) => (
+                            <li key={index} className="grid">{item}</li>
+                        ))}
+                    </ul>
+                    <ul className="product_list">
+                        <li className="title">资源</li>
+                        {resources.map((item, index) => (
+                            <li key={index} className="grid">{item}</li>
+                        ))}
+                    </ul>
+                </ul>
 
-                <li className="title">联系我们</li>
-                <li className="grid">电话：{contact.phone}</li>
-                <li className="grid">邮箱：{contact.email}</li>
-                <li className="grid">地址：{contact.address}</li>
-            </ul>
+                {/* 联系我们 */}
+                <ul className="relation_grid">
+                    <li className="title">联系我们</li>
+                    <li className="grid">电话：{contact.phone}</li>
+                    <li className="grid">邮箱：{contact.email}</li>
+                    <li className="grid">地址：{contact.address}</li>
+                </ul>
+            </div>
+            {/* 侧品牌信息 */}
+
         </div>
     );
 }

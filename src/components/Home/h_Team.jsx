@@ -2,7 +2,6 @@ import './style/h_Team.scss';
 import teamData from '../../../public/data/homeData.json';
 
 function Team() {
-    // 从 teamData 中解构出 team 和 gallery
     const { team, gallery } = teamData;
     const { title, descriptions, stats } = team;
     const { images } = gallery;
@@ -22,8 +21,7 @@ function Team() {
                         </li>
                     ))}
                 </ul>
-
-                <ul className="time">
+                <ul className="time" >
                     {stats.map((stat, index) => (
                         <li key={index} className="times">
                             <div className="client">{stat.value}</div>

@@ -1,9 +1,9 @@
-import './style/h_s-r.scss';
+import './style/h_server.scss';
 import homeData from '../../../public/data/homeData.json';
 import {
     AliwangwangOutlined,
     CodeOutlined,
-    LineChartOutlined,
+    OpenAIOutlined,
     EyeOutlined,
     LayoutOutlined,
     ForkOutlined,
@@ -13,7 +13,7 @@ import {
 const iconMap = {
     AliwangwangOutlined,
     CodeOutlined,
-    LineChartOutlined,
+    OpenAIOutlined,
     EyeOutlined,
     LayoutOutlined,
     ForkOutlined,

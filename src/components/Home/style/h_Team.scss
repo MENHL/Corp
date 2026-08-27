@@ -1,6 +1,8 @@
  .team {
-     //  margin-top: 100px;
      width: 100%;
+     padding: 10px 0;
+     margin-top: 50px;
+     background-color: var(--bg-card-color);
 
      display: flex;
      flex-direction: row;
@@ -19,7 +21,7 @@
      .team_item,
      .team_img {
          width: 50%;
-         height: 60%;
+         height: 100%;
 
          @media (max-width:768px) {
              width: 100%;
@@ -76,6 +78,13 @@
              gap: clamp(30px, 1vw, 50px);
 
              .times {
+                 @media (max-width:768px) {
+                     width: 100%;
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                 }
+
                  .client {
                      font-weight: bold;
                      font-size: clamp(15px, 1.5vw, 18px);
@@ -96,19 +105,22 @@
 
      // 图片
      .team_img {
-         list-style: none;
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
-         gap: 15px;
+         gap: 20px;
          padding: 10px;
 
          .images {
-             flex: 0 0 calc(34% - 0.75rem);
+             flex: 0 0 calc(33.5% - 12px);
 
              border-radius: 8px;
              overflow: hidden;
              aspect-ratio: 4 / 3;
+
+             @media (max-width: 768px) {
+                 flex: 0 0 calc(40% - 0.75rem);
+             }
 
              img {
                  width: 100%;

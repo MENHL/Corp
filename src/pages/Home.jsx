@@ -20,7 +20,7 @@ function Home() {
                 <Server />
             </div>
             {/*客户信赖的理由*/}
-            <div className='client banner'>
+            <div className='clients banner'>
                 <Client />
             </div>
             <div className='team banner'>
