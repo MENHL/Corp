@@ -16,37 +16,84 @@
             }
         ]
     },
-    "services": {
-        "title": "我们的服务",
-        "subtitle": "从战略到落地，为企业提供完整的数字化解决方案",
+    "services": [
+        {
+            "id": 1,
+            "name": "server",
+            "title": "我们的服务与工作方式",
+            "subtitle": "从战略到落地，全程透明可控",
+            "list": [
+                {
+                    "id": 1,
+                    "icon": "AliwangwangOutlined",
+                    "title": "技术咨询",
+                    "description": "为企业提供从框架设计到技术选型的全流程咨询服务，助为数字化转型"
+                },
+                {
+                    "id": 2,
+                    "icon": "CodeOutlined",
+                    "title": "产品开发",
+                    "description": "从需求分析到产品上线，提供端到端的软件开发与交付服务，确保高质量交付。"
+                },
+                {
+                    "id": 3,
+                    "icon": "LineChartOutlined",
+                    "title": "数据智能",
+                    "description": "基于大数据与AI技术，构建智能分析平台，让数据驱动业务决策与增长。"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "reason",
+            "titles": "我们的服务与工作方式",
+            "subtitles": "从战略到落地，全程透明可控",
+            "list": [
+                {
+                    "id": 1,
+                    "icon": "EyeOutlined",
+                    "title": "需求洞察",
+                    "description": "为企业提供从框架设计到技术选型的全流程咨询服务，助为数字化转型"
+                },
+                {
+                    "id": 2,
+                    "icon": "LayoutOutlined",
+                    "title": "方案设计",
+                    "description": "从需求分析到产品上线，提供端到端的软件开发与交付服务，确保高质量交付。"
+                },
+                {
+                    "id": 3,
+                    "icon": "ForkOutlined",
+                    "title": "持续交付",
+                    "description": "基于大数据与AI技术，构建智能分析平台，让数据驱动业务决策与增长。"
+                }
+            ]
+        }
+    ],
+    "client": {
+        "title": "客户信赖的四个理由",
+        "subtitle": "不是口号，而是写进每一份合同的承诺",
         "list": [
             {
                 "id": 1,
-                "icon": "RadarChartOutlined",
-                "title": "技术咨询",
-                "description": "为企业提供从框架设计到技术选型的全流程咨询服务，助为数字化转型"
+                "title": "资深工程团队",
+                "description": "核心成员来自一线互联网公司，平均8年以上工程经验，拒绝新手练手。"
             },
             {
                 "id": 2,
-                "icon": "LayoutOutlined",
-                "title": "产品开发",
-                "description": "从需求分析到产品上线，提供端到端的软件开发与交付服务，确保高质量交付。"
+                "title": "交付质量保障",
+                "description": "代码审查覆盖率100%，自动化测试护航 SLA响应承诺写入合同。"
             },
             {
                 "id": 3,
-                "icon": "LineChartOutlined",
-                "title": "数据智能",
-                "description": "基于大数据与AI技术，构建智能分析平台，让数据驱动业务决策与增长。"
+                "title": "全程透明协作",
+                "description": "项目管理看板实时同步，每周进展报告，任何时候都知道项目推进到哪一步。"
+            },
+            {
+                "id": 4,
+                "title": "长期技术陪伴",
+                "description": "上线只是开始。7×24技术支持与持续迭代，98%的客户选择续约。"
             }
-        ]
-    },
-    "partner": {
-        "title": "值得信赖的合作伙伴",
-        "list": [
-            "字节跳动",
-            "阿里巴巴",
-            "腾讯科技",
-            "网易科技"
         ]
     },
     "team": {

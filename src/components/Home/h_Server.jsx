@@ -1,36 +1,61 @@
-import './style/h_Server.scss'
-// 引入data/json数据文件
-import homeData from '../../../public/data/homeData.json'
-// 引入ICON图标
-import { RadarChartOutlined, LayoutOutlined, LineChartOutlined } from '@ant-design/icons';
-
-const iconMap = {
-    RadarChartOutlined,
-    LayoutOutlined,
+import './style/h_s-r.scss';
+import homeData from '../../../public/data/homeData.json';
+import {
+    AliwangwangOutlined,
+    CodeOutlined,
     LineChartOutlined,
+    EyeOutlined,
+    LayoutOutlined,
+    ForkOutlined,
+} from '@ant-design/icons';
+
+// 图标映射表
+const iconMap = {
+    AliwangwangOutlined,
+    CodeOutlined,
+    LineChartOutlined,
+    EyeOutlined,
+    LayoutOutlined,
+    ForkOutlined,
 };
-function h_Server() {
-    const { services } = homeData;
+
+function HServer() {
+    // 直接从导入的数据中获取 services 数组
+    const services = homeData?.services || [];
+
     return (
         <>
-            <div className="serve-title">{services.title}</div>
-            <div className="server_text">{services.subtitle}</div>
-            <ul className="server-box">
-                {services.list.map((item) => {
-                    const Icon = iconMap[item.icon];
-                    return (
-                        <li className="server_item" key={item.id}>
-                            <div className="li_list li_icon">
-                                {Icon && <Icon />}
-                            </div>
-                            <div className="li_list li_title">{item.title}</div>
-                            <div className="li_list li_text">{item.description}</div>
-                        </li>
-                    );
-                })}
-            </ul>
+            {services.map((item) => {
+                // 兼容两种字段命名：server 用 title/subtitle，reason 用 titles/subtitles
+                const titleText = item.title || item.titles || '服务标题';
+                const subText = item.subtitle || item.subtitles || '服务副标题';
+
+                // 根据 name 设置不同的 className
+                const blockClass = item.name === 'server' ? 'server' : 'reason';
+
+                return (
+                    <div className={blockClass} key={item.id}>
+                        <div className="l_title">{titleText}</div>
+                        <div className="s_title">{subText}</div>
+                        <ul className="s-r-box">
+                            {item.list?.map((listItem) => {
+                                const Icon = iconMap[listItem.icon];
+                                return (
+                                    <li className="s-r_item" key={listItem.id}>
+                                        <div className="li_list li_icon">
+                                            {Icon && <Icon />}
+                                        </div>
+                                        <div className="li_list li_title">{listItem.title}</div>
+                                        <div className="li_list li_text">{listItem.description}</div>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                );
+            })}
         </>
-    )
+    );
 }
 
-export default h_Server
+export default HServer;

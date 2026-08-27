@@ -47,3 +47,18 @@ body {
 .f {
   margin: 0 auto;
 }
+
+/* 大标题 */
+.l_title {
+  font-size: clamp(18px, 20vw, 25px);
+  font-weight: bold;
+  letter-spacing: 4.5px;
+}
+
+/* 副标题 */
+.s_title {
+  font-size: clamp(12px, 3vw, 16px);
+  margin-top: 5px;
+  letter-spacing: 1.2px;
+  color: var(--font-color01);
+}

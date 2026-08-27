@@ -27,7 +27,7 @@ function Team() {
                     {stats.map((stat, index) => (
                         <li key={index} className="times">
                             <div className="client">{stat.value}</div>
-                            <div className="Two">{stat.label}</div>
+                            <div className="two">{stat.label}</div>
                         </li>
                     ))}
                 </ul>

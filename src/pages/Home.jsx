@@ -5,7 +5,7 @@ import './style/home.scss'
 // 引入组件
 import Homs from '../components/Home/h_Hom'
 import Server from '../components/Home/h_Server'
-import Exhibition from '../components/Home/h_Exhibition'
+import Client from '../components/Home/h_client'
 import Team from '../components/Home/h_Team'
 
 function Home() {
@@ -15,13 +15,13 @@ function Home() {
             <section className="home_list banner">
                 <Homs />
             </section>
-            {/* 服务区域 */}
-            <div className='serve banner'>
+            {/* 我们的服务与工作方式*/}
+            <div className='s_r banner'>
                 <Server />
             </div>
-            {/*值得信赖的伙伴*/}
-            <div className='exhibition banner'>
-                <Exhibition />
+            {/*客户信赖的理由*/}
+            <div className='client banner'>
+                <Client />
             </div>
             <div className='team banner'>
                 <Team />

@@ -29,8 +29,12 @@ function f_Footer() {
                 <div className="logo">
                     <Logo />
                 </div>
+
                 <div className="title">
-                    用技术驱动业务增长，为企业提供全栈技术解决方案
+                    用技术驱动业务
+                </div>
+                <div className="introduce">
+                    为企业提供全栈技术解决方案
                 </div>
                 <div className="icon">
                     <WechatFilled />
@@ -38,7 +42,7 @@ function f_Footer() {
                     <GithubFilled />
                 </div>
             </div>
-
+            <h1 className='h'></h1>
             {/* 产品、公司、资源 三列 */}
             <ul className="company-grid">
                 <ul className="product_list">
@@ -63,6 +67,7 @@ function f_Footer() {
 
             {/* 联系我们 */}
             <ul className="relation_grid">
+
                 <li className="title">联系我们</li>
                 <li className="grid">电话：{contact.phone}</li>
                 <li className="grid">邮箱：{contact.email}</li>
