@@ -1,8 +1,9 @@
 import './style/case.scss'
 
+
 function Case() {
     return (
-        <div>案例页面</div>
+        <div>12312132</div>
     )
 }
 

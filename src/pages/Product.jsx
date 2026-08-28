@@ -59,11 +59,11 @@ const productList = [
 
 function Product() {
     return (
-        <div className="product banner f">
+        <div id='product' className="clone banner f">
             {/* 大标题 */}
-            <div className="product_title">
-                <h1 className="l_title L">{pageData.mainTitle}</h1>
-                <h2 className="s_title">{pageData.subTitle}</h2>
+            <div className="product_title m ">
+                <h1 className="l_title">{pageData.mainTitle}</h1>
+                <p className="s_title">{pageData.subTitle}</p>
             </div>
             <ul className="product_content">
                 {productList.map((item) => (

@@ -1,4 +1,6 @@
 import './footer.scss';
+
+import { Link } from 'react-router-dom';
 import Logo from '../Home/Logo';
 import { WechatFilled, GithubFilled, SunFilled } from '@ant-design/icons';
 
@@ -23,13 +25,15 @@ function f_Footer() {
     const { products, company, resources, contact } = footerData;
 
     return (
-        <div className="footer-box">
+        <div id="footer-box">
             <div className='f-cta1'>
                 <div className='title-h1'>找到合适你的技术解决方案</div>
                 <div className="title-h2">告诉我们你的业务挑战，我们的专家团队将在24小时内与你联系</div>
                 <ul className='btn'>
                     <li className="realize">预约演示→</li>
-                    <li className='subscribe'>联系我们</li>
+                    <Link to="/contact">
+                        <li className='subscribe'>联系我们</li>
+                    </Link>
                 </ul>
 
             </div>

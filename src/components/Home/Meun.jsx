@@ -1,4 +1,3 @@
-// Menus.jsx
 import './style/Meun.scss'
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu } from 'antd';
@@ -14,19 +13,22 @@ const items = [
 const Menus = () => {
     const navigate = useNavigate();
     const location = useLocation();
-
-    // 根据当前路径获取选中的 key（去掉开头的 '/'）
-    const currentKey = location.pathname.replace('/', '') || 'home';
+    // 获取当前路径（小写），忽略大小写匹配
+    const currentPath = location.pathname.toLowerCase();
+    // 查找与当前路径匹配的菜单项,查找匹配的菜单项（忽略大小写）
+    const currentKey = items.find(item =>
+        currentPath.startsWith(`/${item.key.toLowerCase()}`)
+    )?.key || '';
 
     const onClick = (e) => {
-        navigate(`/${e.key}`);   // 跳转到对应路径
+        navigate(`/${e.key}`);
     };
 
     return (
         <Menu
-            className="custom-menu "
+            className="custom-menu"
             onClick={onClick}
-            selectedKeys={[currentKey]}   // 高亮当前项
+            selectedKeys={[currentKey]}   // 若 currentKey 为空，则无高亮
             mode="horizontal"
             items={items}
         />

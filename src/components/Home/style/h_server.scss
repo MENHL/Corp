@@ -58,20 +58,29 @@
                  grid: 0;
 
                  .li_list {
-                     height: 33.333%;
+                     height: 33.33%;
+
                      .bg-li {
-                         width: 60px;
-                         height: 60px;
-                         line-height: 60px;
+                         width: clamp(40px, 5vw, 60px);
+                         height: clamp(40px, 5vw, 60px);
+                         line-height: clamp(40px, 5vw, 60px);
                          text-align: center;
                          border-radius: 20%;
                          background-color: var(--bg--color03);
+
+                         @media (max-width: 768px) {
+                             width: 47px;
+                             height: 47px;
+                             line-height: 47px;
+                         }
                      }
+
+
                  }
 
                  // 图标
                  .li_icon {
-                     font-size: clamp(30px, 3vw, 35px); // 移动端~桌面自适应
+                     font-size: clamp(28px, 3vw, 35px); // 移动端~桌面自适应
                  }
 
                  // 标题

@@ -1,4 +1,5 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { lazy } from 'react';
 import App from '../layout/App';               // 根布局组件
 // 懒加载
 // import { lazy } from 'react';
@@ -8,12 +9,10 @@ import Case from '../pages/Case'               // 案例
 import Regards from '../pages/Regards'
 import Journalism from '../pages/Journalism'   // 新闻
 
+
 // 页面组件懒加载
-// const Home = lazy(() => import('../pages/Home'));
-// const Product = lazy(() => import('../pages/Product'));
+const Contact = lazy(() => import('../components/Contact'));
 // const Case = lazy(() => import('../pages/Case'));
-// const Regards = lazy(() => import('../pages/Regards'));
-// const Journalism = lazy(() => import('../pages/Journalism'));
 
 const router = createBrowserRouter([
     {
@@ -30,6 +29,13 @@ const router = createBrowserRouter([
                 name: "home",
                 Component: Home
             },
+            // 联系我们 组件
+            {
+                path: "/contact",
+                name: "contact",
+                element: <Contact />
+            },
+            /* ________________________________________ */
             {
                 path: "/product",
                 name: "product",

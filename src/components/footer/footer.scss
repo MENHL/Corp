@@ -1,180 +1,180 @@
- .footer-box {
-     width: 100%;
-     padding: 0 20px;
-     color: var(--bg-card-color);
-     background-color: var(--bt-color);
-     display: flex;
-     flex-direction: column;
+#footer-box {
+    width: 100%;
+    padding: 0 20px;
+    color: var(--bg-card-color);
+    background-color: var(--bt-color);
+    display: flex;
+    flex-direction: column;
 
-     @media (max-width:768px) {
-         flex-direction: column;
-     }
+    @media (max-width:768px) {
+        flex-direction: column;
+    }
 
-     //  左边
-     .f-cta1 {
-         height: auto;
-         margin: 50px 0;
-         display: flex;
-         flex: 1;
-         flex-direction: column;
-         justify-content: center;
-         gap: 20px;
+    //  左边
+    .f-cta1 {
+        height: auto;
+        margin: 50px 0;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
 
-         // 主标题
-         .title-h1 {
-             font-size: clamp(14px, 20vw, 25px);
-             color: var(--bg-card-color);
-         }
+        // 主标题
+        .title-h1 {
+            font-size: clamp(14px, 20vw, 25px);
+            color: var(--bg-card-color);
+        }
 
-         // 副标题
-         .title-h2 {
-             font-size: clamp(12px, 3.8vw, 16px);
-             color: var(--font-color01);
-         }
+        // 副标题
+        .title-h2 {
+            font-size: clamp(12px, 3.8vw, 16px);
+            color: var(--font-color01);
+        }
 
-         // 按钮
-         .btn {
-             display: flex;
-             gap: 30px;
+        // 按钮
+        .btn {
+            display: flex;
+            gap: 30px;
 
-             .realize,
-             .subscribe {
-                 -webkit-tap-highlight-color: transparent;
-                 width: 120px;
-                 height: 45px;
-                 font-size: clamp(14px, 2vw, 18px);
-                 letter-spacing: 1px;
-                 display: flex;
-                 align-items: center;
-                 justify-content: center;
-                 border-radius: 8px;
-                 cursor: pointer;
-             }
+            .realize,
+            .subscribe {
+                -webkit-tap-highlight-color: transparent;
+                width: 120px;
+                height: 45px;
+                font-size: clamp(14px, 2vw, 18px);
+                letter-spacing: 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                cursor: pointer;
+            }
 
-             // 左边按钮
-             .realize {
-                 font-weight: bold;
-                 background-color: var(--bg-card-color);
-                 color: var(--bt-color)
-             }
+            // 左边按钮
+            .realize {
+                font-weight: bold;
+                background-color: var(--bg-card-color);
+                color: var(--bt-color)
+            }
 
-             // 右边按钮
-             .subscribe {
-                 // padding: 5px;
-                 border: 1px solid var(--font-color01);
-                 //  color: var(--font-color);
-             }
+            // 右边按钮
+            .subscribe {
+                color: var(--bg-card-color);
+                border: 1px solid var(--font-color01);
+                //  color: var(--font-color);
+            }
 
-         }
-     }
+        }
+    }
 
-     // 右边
-     .f-cta2 {
-         width: 100%;
-         display: flex;
-         flex: 1;
-         -webkit-flex-direction: row;
-         flex-direction: row;
-         margin: 20px 0;
+    // 右边
+    .f-cta2 {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        margin: 20px 0;
 
-         @media (max-width: 768px) {
-             gap: 5px;
-             -webkit-flex-direction: column;
-             flex-direction: column;
-         }
+        @media (max-width: 768px) {
+            gap: 5px;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
 
-         .relation_grid,
-         .product-grid {
-             display: flex;
-             flex: 1;
-         }
+        .relation_grid,
+        .product-grid {
+            display: flex;
+            flex: 1;
+        }
 
-         .company-grid {
-             display: flex;
-             align-items: center;
-             flex: 2;
+        .company-grid {
+            display: flex;
+            align-items: center;
+            flex: 2;
 
-             @media (max-width: 768px) {
-                 flex: 1;
-             }
-         }
+            @media (max-width: 768px) {
+                flex: 1;
+            }
+        }
 
-         // 左边logo
-         .product-grid {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             gap: 5px;
+        // 左边logo
+        .product-grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
 
-             .logo {
-                 color: var(--bg-card-color);
-             }
+            .logo {
+                color: var(--bg-card-color);
+            }
 
-             .introduce,
-             .title {
-                 font-size: clamp(12px, 3.8vw, 16.5px);
-                 color: var(--font-color01);
-             }
+            .introduce,
+            .title {
+                font-size: clamp(12px, 3.8vw, 16.5px);
+                color: var(--font-color01);
+            }
 
-             .icon {
-                 display: flex;
-                 gap: 5%;
-                 font-size: 25px;
+            .icon {
+                display: flex;
+                gap: 5%;
+                font-size: 25px;
 
-             }
-         }
+            }
+        }
 
-         // 中间介绍
-         .company-grid {
-             display: flex;
-             justify-content: space-around;
-             gap: 10px;
+        // 中间介绍
+        .company-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
 
-             @media (max-width: 768px) {
-                 justify-content: space-between;
-             }
+            @media (max-width: 768px) {
+                justify-content: space-between;
+            }
 
-             .product_list {
-                 display: flex;
-                 flex-direction: column;
-                 gap: 5px;
+            .product_list {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
 
-                 .title {
-                     font-size: clamp(14px, 2vw, 20px);
-                     color: var(--bg-card-color);
-                 }
+                .title {
+                    font-size: clamp(14px, 2vw, 20px);
+                    color: var(--bg-card-color);
+                }
 
-                 .grid {
-                     font-size: clamp(1px, 3vw, 17px);
-                     color: var(--font-color01);
-                 }
-             }
-         }
+                .grid {
+                    font-size: clamp(1px, 3vw, 17px);
+                    color: var(--font-color01);
+                }
+            }
+        }
 
-         //  右边联系方式
-         .relation_grid {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
+        //  右边联系方式
+        .relation_grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-             gap: 5px;
+            gap: 5px;
 
-             @media (max-width:768px) {
-                 justify-content: flex-start; // 移动端可取消居中，保持顶部
-             }
-
-
-             .title {
-                 font-size: clamp(16px, 2vw, 20px);
-                 color: #ffffff;
-             }
-
-             .grid {
-                 font-size: clamp(1px, 3vw, 17px);
-                 color: var(--font-color01);
-             }
-         }
-     }
+            @media (max-width:768px) {
+                justify-content: flex-start; // 移动端可取消居中，保持顶部
+            }
 
 
- }
+            .title {
+                font-size: clamp(16px, 2vw, 20px);
+                color: #ffffff;
+            }
+
+            .grid {
+                font-size: clamp(1px, 3vw, 17px);
+                color: var(--font-color01);
+            }
+        }
+    }
+
+
+}

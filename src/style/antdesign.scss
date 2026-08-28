@@ -1,0 +1,14 @@
+// 修改 Select 下拉菜单背景色
+.ant-select-dropdown {
+
+    // 选中项背景色（可选）
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        box-shadow: none !important;
+        background-color: #e2e8f0 !important;
+    }
+
+    // 悬停项背景色（可选）
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+        background-color: #e2e8f0 !important;
+    }
+}
