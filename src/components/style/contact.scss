@@ -1,6 +1,4 @@
 #contacts {
-    // height: auto;
-
     .contacts_form {
         width: 100%;
         padding: 40px 50px;
@@ -8,10 +6,12 @@
         flex-direction: row;
         flex-wrap: wrap; // 允许换行
         gap: 30px;
+
         @media (max-width:768px) {
             padding: 16px;
             flex-direction: column;
         }
+
         // 表单
         .form {
             width: 100%;
@@ -41,6 +41,7 @@
                 gap: 5px;
                 width: 100%;
             }
+
             /* 全宽字段（跨两列） */
             .field-group.full-width {
                 grid-column: 1 / -1;
@@ -147,15 +148,8 @@
 
             /* ===== 响应式 ===== */
             @media (max-width: 700px) {
-                .form {}
-
-                .form-card {
-                    // padding: 32px 24px;
-                }
-
                 .form-grid {
                     grid-template-columns: 1fr;
-                    // gap: 18px;
                 }
 
                 .field-group.full-width {
@@ -289,6 +283,7 @@
                 background-color: var(--bg-card-color);
                 flex: 1;
                 height: 100%;
+
                 @media (max-width: 768px) {
                     min-height: 210px; // 手机端确保足够显示
                     height: auto;

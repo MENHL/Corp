@@ -1,10 +1,16 @@
 import './style/case.scss'
 
-// 临时导入
 
 function Case() {
     return (
-        <div></div>
+        <div id='case' className='f banner'>
+            <div className='l_title'>客户案例</div>
+            <div className='btn-box'>
+
+            </div>
+
+
+        </div>
     )
 }
 

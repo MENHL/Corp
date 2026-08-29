@@ -1,7 +1,7 @@
 import './style/h_Hom.scss'
 import { useNavigate } from 'react-router-dom';
 // 模拟后端发送的 homeData.json 数据文件
-import homeData from '../../../public/data/homeData.json'
+import homeData from '../../data/homeData.json'
 
 function Homs() {
     const { hero } = homeData;

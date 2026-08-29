@@ -1,13 +1,6 @@
 import './style/h_server.scss';
-import homeData from '../../../public/data/homeData.json';
-import {
-    AliwangwangOutlined,
-    CodeOutlined,
-    OpenAIOutlined,
-    EyeOutlined,
-    LayoutOutlined,
-    ForkOutlined,
-} from '@ant-design/icons';
+import homeData from '../../data/homeData.json';
+import { AliwangwangOutlined, CodeOutlined, OpenAIOutlined, EyeOutlined, LayoutOutlined, ForkOutlined } from '@ant-design/icons';
 
 // 图标映射表
 const iconMap = {

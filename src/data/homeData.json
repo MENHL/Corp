@@ -13,6 +13,7 @@
             {
                 "id": 2,
                 "label": "客户案例",
+                "path": "/case",
                 "type": "default"
             }
         ]

@@ -1,9 +1,9 @@
 {
     "newsList": [
         {
-            "key": "1",
+            "id": "1",
             "label": "Chart AI智能平台正式发布：让企业数据分析触手可及",
-            "image": "/images/01.png",
+            "src": "/images/01.png",
             "tag": "产品发布",
             "date": "2022-11-13",
             "title": "ChartGPT 正式发布",
@@ -11,9 +11,9 @@
             "link": "/news/1"
         },
         {
-            "key": "2",
+            "id": "2",
             "label": "Corp 完成 5000 万元 A 轮融资，加速 AI 产品布局",
-            "image": "/images/02.png",
+            "src": "/images/02.png",
             "tag": "公司动态",
             "date": "2023-05-20",
             "title": "Corp 完成 5000 万元 A 轮融资",
@@ -21,9 +21,9 @@
             "link": "/news/2"
         },
         {
-            "key": "3",
+            "id": "3",
             "label": "NovaAI 3.0 全新升级：多模态能力全面增强",
-            "image": "/images/03.png",
+            "src": "/images/03.png",
             "tag": "产品发布",
             "date": "2024-01-15",
             "title": "NovaAI 3.0 全新升级发布",
@@ -31,9 +31,9 @@
             "link": "/news/3"
         },
         {
-            "key": "4",
+            "id": "4",
             "label": "Corp 荣获「2024 年度最佳企业服务商」称号",
-            "image": "/images/04.png",
+            "src": "/images/04.png",
             "tag": "荣誉奖项",
             "date": "2024-03-10",
             "title": "Corp 荣获年度最佳企业服务商",
@@ -41,9 +41,9 @@
             "link": "/news/4"
         },
         {
-            "key": "5",
+            "id": "5",
             "label": "Corp 与某头部金融机构达成战略合作，共建 AI 风控平台",
-            "image": "/images/05.png",
+            "src": "/images/05.png",
             "tag": "战略合作",
             "date": "2024-05-08",
             "title": "Corp 与头部金融机构达成战略合作",
@@ -51,9 +51,9 @@
             "link": "/news/5"
         },
         {
-            "key": "6",
+            "id": "6",
             "label": "Corp 亮相 2024 世界人工智能大会，展示最新 AI 成果",
-            "image": "/images/06.png",
+            "src": "/images/06.png",
             "tag": "行业活动",
             "date": "2024-07-04",
             "title": "Corp 亮相 2024 世界人工智能大会",
@@ -61,9 +61,9 @@
             "link": "/news/6"
         },
         {
-            "key": "7",
+            "id": "7",
             "label": "Corp 发布《2024 企业 AI 应用白皮书》",
-            "image": "/images/07.png",
+            "src": "/images/07.png",
             "tag": "行业洞察",
             "date": "2024-08-22",
             "title": "Corp 发布企业 AI 应用白皮书",
@@ -71,9 +71,9 @@
             "link": "/news/7"
         },
         {
-            "key": "8",
+            "id": "8",
             "label": "Corp 正式成立深圳分公司，加速华南市场布局",
-            "image": "/images/08.png",
+            "src": "/images/08.png",
             "tag": "公司动态",
             "date": "2024-10-12",
             "title": "Corp 深圳分公司正式成立",
@@ -81,9 +81,9 @@
             "link": "/news/8"
         },
         {
-            "key": "9",
+            "id": "9",
             "label": "Corp 与知名高校共建 AI 联合实验室",
-            "image": "/images/09.png",
+            "src": "/images/09.png",
             "tag": "产学研合作",
             "date": "2024-12-01",
             "title": "Corp 与高校共建 AI 联合实验室",
@@ -91,9 +91,9 @@
             "link": "/news/9"
         },
         {
-            "key": "10",
+            "id": "10",
             "label": "Corp 2024 年度回顾：服务客户突破 500 家",
-            "image": "/images/010.png",
+            "src": "/images/010.png",
             "tag": "公司动态",
             "date": "2024-12-28",
             "title": "Corp 2024 年度回顾",

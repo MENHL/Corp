@@ -1,5 +1,5 @@
 import './style/h_Team.scss';
-import teamData from '../../../public/data/homeData.json';
+import teamData from '../../data/homeData.json';
 
 function Team() {
     const { team, gallery } = teamData;

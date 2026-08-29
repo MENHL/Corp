@@ -1,23 +1,20 @@
 #DemonStration {
-  // height: auto;
-
   .contacts_form {
     width: 100%;
     padding: 40px 50px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; // 允许换行
+    flex-wrap: wrap;
     gap: 30px;
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       padding: 16px;
       flex-direction: column;
-
     }
 
-    // 表单
     .form {
       width: 100%;
+      min-width: 0; // 关键：允许 flex 子项收缩
       padding: 40px;
       border-radius: var(--b-radius);
       background-color: var(--bg-card-color);
@@ -25,32 +22,36 @@
       justify-content: center;
       flex: 1.5;
 
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         height: auto;
         flex: 1;
+        padding: 24px;
       }
 
       .form-grid {
         width: 100%;
+        min-width: 0; // 防止网格溢出
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px 28px;
+
+        @media (max-width: 700px) {
+          grid-template-columns: 1fr;
+        }
       }
 
-      /* 每个字段组 */
       .field-group {
         display: flex;
         flex-direction: column;
         gap: 5px;
         width: 100%;
+        min-width: 0; // 允许内部元素收缩
       }
 
-      /* 全宽字段（跨两列） */
       .field-group.full-width {
         grid-column: 1 / -1;
       }
 
-      /* ===== 感兴趣的产品 ===== */
       .field-label {
         font-size: 14px;
         font-weight: bold;
@@ -63,6 +64,7 @@
       .btn-box {
         margin-top: 20px;
         display: flex;
+        flex-wrap: wrap; // 允许按钮换行，防止溢出
         gap: 20px;
       }
 
@@ -71,9 +73,9 @@
         margin-left: 1px;
       }
 
-      /* ===== 输入框 / 下拉框 / 文本域 ===== */
       .field-input {
         width: 100%;
+        max-width: 100%; // 确保不超出父容器
         padding: 12px 16px;
         font-size: 15px;
         font-family: inherit;
@@ -97,54 +99,15 @@
         border-color: 1px solid var(--bg-card-color);
       }
 
-      .field-input:focus {
-        background: var(--bg-card-color);
-      }
-
-      /* ===== 提交按钮 ===== */
       .submit-wrapper {
         grid-column: 1 / -1;
         margin-top: 12px;
         display: flex;
         justify-content: flex-start;
-      }
 
-      // 提交按钮
-      .btn-submit {
-        background-color: var(--bt-color);
-        // background: ;
-        color: var(--bg-card-color);
-        font-size: 16px;
-        font-weight: 600;
-        padding: 14px 48px;
-        border: none;
-        border-radius: 40px;
-        cursor: pointer;
-        transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
-        letter-spacing: 0.2px;
-        box-shadow: 0 4px 14px rgba(10, 30, 47, 0.10);
-      }
-
-
-
-      /* ===== 响应式 ===== */
-      @media (max-width: 700px) {
-        .form-grid {
-          grid-template-columns: 1fr;
-
-        }
-
-        .field-group.full-width {
-          grid-column: 1;
-        }
-
-        .submit-wrapper {
-          grid-column: 1;
-          justify-content: stretch;
-        }
-
-        .form-title {
-          font-size: 24px;
+        .ant-btn {
+          width: 100%; // 按钮宽度占满
+          max-width: 100%;
         }
       }
 
@@ -154,8 +117,7 @@
           border-radius: 16px;
         }
 
-        .field-input,
-        .field-select {
+        .field-input {
           padding: 10px 14px;
           font-size: 14px;
           border-radius: 10px;
@@ -163,30 +125,25 @@
       }
     }
 
-    // 右侧区域
+    // 右侧演讲展示
     .atlas {
       width: 100%;
+      min-width: 0;
       display: flex;
-      // justify-content: center;
       flex-direction: column;
-      // gap: 20px;
-      overflow: hidden;
       flex: 1;
       gap: 20px;
 
       @media (max-width: 768px) {
         flex: none;
-        /* 不再按比例伸缩，根据内容撑开 */
         height: auto;
       }
 
-      // 标题
       .title {
         font-size: 20px;
         font-weight: bold;
       }
 
-      // 获得感
       .achievement {
         display: flex;
         flex-direction: column;
@@ -202,7 +159,6 @@
           gap: 10px;
 
           .text {
-           
             font-weight: 530;
             font-size: 15px;
             letter-spacing: 2.2px;
@@ -210,7 +166,6 @@
         }
       }
 
-      // 演讲内容模块
       .speech {
         display: flex;
         flex-direction: column;
@@ -220,12 +175,10 @@
         background-color: #ececec;
         border-radius: var(--b-radius);
 
-        // 演讲内容
         .content {
           font-size: 16px;
         }
 
-        // 演讲者
         .speaker {
           font-size: 14px;
           color: var(--font-color01);

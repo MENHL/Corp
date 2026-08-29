@@ -1,10 +1,10 @@
 import './style/h_client.scss'
 // 引入模拟数据
-import homedata from '../../../public/data/homeData.json'
+import homeData from '../../data/homeData.json'
 
 
 function h_client() {
-    const { client } = homedata;
+    const { client } = homeData;
     return (
         <>
             <div className="l_title">{client.title}</div>

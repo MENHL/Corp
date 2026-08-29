@@ -8,9 +8,7 @@ import Product from '../pages/Product'         // 产品
 import Case from '../pages/Case'               // 案例
 import Regards from '../pages/Regards'
 import Journalism from '../pages/Journalism'   // 新闻
-
-
-// 页面组件懒加载
+// 联系我们
 const Contact = lazy(() => import('../components/Contact'));
 // 预约演示
 const DemonStration = lazy(() => import('../components/DemonStration'));
@@ -30,6 +28,7 @@ const router = createBrowserRouter([
                 name: "home",
                 Component: Home
             },
+            /* —————————————————————————————————————————————— */
             // 联系我们 组件
             {
                 path: "/contact",

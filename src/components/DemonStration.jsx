@@ -1,7 +1,6 @@
-import '../style/antdesign.scss';
 import './style/DemonStration.scss';
 import { useState } from 'react';
-import { ConfigProvider, Button, DatePicker, message } from 'antd'; // 引入 message
+import { ConfigProvider, Button, DatePicker, message } from 'antd';
 import { RightOutlined, DownOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
@@ -16,7 +15,6 @@ function DemonStration() {
     const [selectedDate, setSelectedDate] = useState(dayjs());
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
 
-    // 表单字段状态
     const [form, setForm] = useState({
         fullName: '',
         email: '',
@@ -24,41 +22,42 @@ function DemonStration() {
         company: '',
     });
 
-    // 产品列表
     const products = ['产品开发', '数据智能', '云基础设施', '技术咨询'];
-    // 演示时间段
     const timeSlots = ['上午 10：00', '下午 14：00', '下午 16：00'];
 
-    // 正则校验
+    // ========== 右侧数据 ==========
+    const achievements = [
+        { id: 1, text: '30分钟1对1产品演示，聚焦你的业务场景' },
+        { id: 2, text: '解决方案专家现场答疑，含架构与报价建议' },
+        { id: 3, text: '演示后提供定制方案文档，无任何附加义务' },
+    ];
+
+    const testimonial = {
+        content: '「演示完全围绕我们的业务场景展开，第二天就收到了定制方案，专业程度令人印象深刻。」',
+        speaker: '——某零售集团技术负责人',
+    };
+    // ===========================
+
     const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const PHONE_REGEX = /^1[3-9]\d{9}$/;
 
-    // 处理输入变化
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setForm((prev) => ({ ...prev, [name]: value }));
     };
 
-    // 处理产品点击
     const handleProductClick = (product) => setSelectedProduct(product);
-    // 处理时间段点击
     const handleTimeClick = (time) => setSelectedTime(time);
-    // 处理日期选择
     const handleDateChange = (date) => setSelectedDate(date);
 
-    // 提交处理
     const handleSubmit = (e) => {
         e.preventDefault();
+        const { fullName, email, phone } = form;
 
-        const { fullName, email, phone, company } = form;
-
-        // 1. 校验姓名
         if (!fullName.trim()) {
             message.warning('请输入您的姓名');
             return;
         }
-
-        // 2. 校验邮箱
         if (!email.trim()) {
             message.warning('请输入您的邮箱');
             return;
@@ -67,8 +66,6 @@ function DemonStration() {
             message.warning('请输入有效的邮箱地址');
             return;
         }
-
-        // 3. 校验手机号（必填）
         if (!phone.trim()) {
             message.warning('请输入您的手机号');
             return;
@@ -78,22 +75,17 @@ function DemonStration() {
             return;
         }
 
-        // 全部校验通过，执行提交逻辑
         message.success('预约提交成功！我们会尽快与您联系。');
 
-        // 清空所有输入框
         setForm({
             fullName: '',
             email: '',
             phone: '',
             company: '',
         });
-
-        // 重置选择项
         setSelectedProduct('产品开发');
         setSelectedTime('上午 10：00');
         setSelectedDate(dayjs());
-        // 可选：关闭日期面板
         setIsDatePickerOpen(false);
     };
 
@@ -109,7 +101,7 @@ function DemonStration() {
                         {/* 姓名 */}
                         <div className="field-group">
                             <label className="field-label" htmlFor="fullName">
-                                姓名 <span className="required" aria-hidden="true">*</span>
+                                姓名 <span className="required">*</span>
                             </label>
                             <input
                                 className="field-input"
@@ -127,7 +119,7 @@ function DemonStration() {
                         {/* 邮箱 */}
                         <div className="field-group">
                             <label className="field-label" htmlFor="email">
-                                邮箱 <span className="required" aria-hidden="true">*</span>
+                                邮箱 <span className="required">*</span>
                             </label>
                             <input
                                 className="field-input"
@@ -145,7 +137,7 @@ function DemonStration() {
                         {/* 联系电话 */}
                         <div className="field-group">
                             <label className="field-label" htmlFor="phone">
-                                联系电话 <span className="required" aria-hidden="true">*</span>
+                                联系电话 <span className="required">*</span>
                             </label>
                             <input
                                 className="field-input"
@@ -207,7 +199,7 @@ function DemonStration() {
                         {/* 期望日期 */}
                         <div className="field-group full-width">
                             <label className="field-label">
-                                期望日期 <span className="required" aria-hidden="true">*</span>
+                                期望日期 <span className="required">*</span>
                             </label>
                             <ConfigProvider locale={zhCN}>
                                 <DatePicker
@@ -262,18 +254,12 @@ function DemonStration() {
                         {/* 提交按钮 */}
                         <div className="submit-wrapper">
                             <Button
+                                color="default"
+                                variant="solid"
                                 type="primary"
                                 htmlType="submit"
                                 size="large"
                                 block
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#14344d';
-                                    e.currentTarget.style.borderColor = '#14344d';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = '#000000';
-                                    e.currentTarget.style.borderColor = '#000000';
-                                }}
                             >
                                 确认预约
                             </Button>
@@ -287,28 +273,24 @@ function DemonStration() {
                         </div>
                     </form>
                 </div>
-                {/* 右侧区域 */}
+
+                {/* ========== 右侧区域 - 动态渲染 ========== */}
                 <div className='atlas'>
                     <h1 className='title'>演示中你将获得</h1>
                     <ul className='achievement'>
-                        <li className='list'>
-                            <div className='box'>✓</div>
-                            <p className='text'>30分钟1对1产品演示，聚焦你的业务场景</p>
-                        </li>
-                        <li className='list'>
-                            <div className='box'>✓</div>
-                            <p className='text'>解决方案专家现场答疑，含架构与报价建议</p>
-                        </li>
-                        <li className='list'>
-                            <div className='box'>✓</div>
-                            <p className='text'>演示后提供定制方案文档，无任何附加义务</p>
-                        </li>
+                        {achievements.map((item) => (
+                            <li className='list' key={item.id}>
+                                <div className='box'>✓</div>
+                                <p className='text'>{item.text}</p>
+                            </li>
+                        ))}
                     </ul>
                     <div className='speech'>
-                        <p className='content'>「演示完全围绕我们的业务场景展开，第二天就收到了定制方案，专业程度令人印象深刻。」</p>
-                        <p className='speaker'>——某零售集团技术负责人</p>
+                        <p className='content'>{testimonial.content}</p>
+                        <p className='speaker'>{testimonial.speaker}</p>
                     </div>
                 </div>
+                {/* ======================================== */}
             </div>
         </div>
     );

@@ -1,18 +1,21 @@
 import './style/journalism.scss'
 import { Collapse } from 'antd';
-import journalismData from '../../public/data/journalismData.json'
+import journalismData from '../data/journalismData.json'
 import { useState } from 'react';
+
 function Journalism() {
+    const { newsList } = journalismData
     const [expandIconPlacement] = useState('end');
 
+
     // 将 JSON 数据转换为 Collapse 需要的 items 格式
-    const items = journalismData.newsList.map(item => ({
-        key: item.key,
+    const items = newsList.map(item => ({
+        key: item.id,
         label: item.label,
         children: (
             <div className='Collapse_box'>
                 <div className='Collapse-img'>
-                    <img className='img' src={item.image} alt={item.title} />
+                    <img className='img' src={item.src} alt={item.title} />
                 </div>
                 <div className='Collapse-title'>
                     <div className='time-box'>

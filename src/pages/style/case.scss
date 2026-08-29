@@ -1,0 +1,13 @@
+#case {
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-card-color);
+
+    .text-box {
+        width: 100%;
+    }
+}
