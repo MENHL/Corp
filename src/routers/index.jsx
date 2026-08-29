@@ -12,7 +12,8 @@ import Journalism from '../pages/Journalism'   // 新闻
 
 // 页面组件懒加载
 const Contact = lazy(() => import('../components/Contact'));
-// const Case = lazy(() => import('../pages/Case'));
+// 预约演示
+const DemonStration = lazy(() => import('../components/DemonStration'));
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,12 @@ const router = createBrowserRouter([
                 path: "/contact",
                 name: "contact",
                 element: <Contact />
+            },
+            // 预约演示
+            {
+                path: "/demonStration",
+                name: "demonStration",
+                element: <DemonStration />
             },
             /* ________________________________________ */
             {

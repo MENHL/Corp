@@ -79,8 +79,6 @@ function App() {
   };
 
   const Contentstyle = {
-    height: 'auto',          // 不再强制撑满
-    minHeight: 'auto',       // 取消最小高度
     display: 'flex',
     flexDirection: 'column',
   };

@@ -18,16 +18,9 @@
   /* 圆角 */
   --b-radius: 12px;
   height: 100%;
-  font-size: 18px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (max-width: 1024px) {
-  :root {
-    font-size: 16px;
-
-  }
 }
 
 * {
@@ -39,7 +32,7 @@
 html,
 body {
   height: 100vh;
-  background-color: var(--bg-color01);
+  background-color: var(--bg-color02);
   overflow-x: hidden;
 }
 

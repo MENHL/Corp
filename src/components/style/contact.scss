@@ -3,20 +3,15 @@
 
     .contacts_form {
         width: 100%;
-
-
         padding: 40px 50px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap; // 允许换行
         gap: 30px;
-
         @media (max-width:768px) {
             padding: 16px;
             flex-direction: column;
-
         }
-
         // 表单
         .form {
             width: 100%;
@@ -46,7 +41,6 @@
                 gap: 5px;
                 width: 100%;
             }
-
             /* 全宽字段（跨两列） */
             .field-group.full-width {
                 grid-column: 1 / -1;
@@ -295,14 +289,10 @@
                 background-color: var(--bg-card-color);
                 flex: 1;
                 height: 100%;
-
-
                 @media (max-width: 768px) {
                     min-height: 210px; // 手机端确保足够显示
                     height: auto;
                 }
-
-
             }
         }
     }

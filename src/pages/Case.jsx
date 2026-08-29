@@ -1,9 +1,10 @@
 import './style/case.scss'
 
+// 临时导入
 
 function Case() {
     return (
-        <div>12312132</div>
+        <div></div>
     )
 }
 
