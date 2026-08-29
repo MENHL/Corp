@@ -29,7 +29,6 @@
                 object-fit: cover;
                 display: flex;
                 align-items: center;
-                align-items: center;
             }
 
             .Collapse-title {
@@ -46,11 +45,13 @@
 
                 // 产品发布
                 .time-box {
-                    width: 100px;
-                    height: 50px;
+                    width: clamp(90px, 5vw, 100px);
+                    height:clamp(35px, 5vw, 45px);
                     border-radius: 40px;
                     background-color: var(--bg--color05);
-
+                    @media (max-width: 768px) {
+                        margin-top: 15px;
+                    }
                     display: flex;
                     justify-content: center;
                     align-items: center;

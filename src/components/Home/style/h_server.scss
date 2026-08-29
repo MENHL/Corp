@@ -61,28 +61,21 @@
                      height: 33.33%;
 
                      .bg-li {
-                         width: clamp(40px, 5vw, 60px);
-                         height: clamp(40px, 5vw, 60px);
-                         line-height: clamp(40px, 5vw, 60px);
+                         width: clamp(47px, 5vw, 60px);
+                         height: clamp(47px, 5vw, 60px);
                          text-align: center;
                          border-radius: 20%;
                          background-color: var(--bg--color03);
 
-                         @media (max-width: 768px) {
-                             width: 47px;
-                             height: 47px;
-                             line-height: 47px;
-                         }
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
                      }
-
-
                  }
-
                  // 图标
                  .li_icon {
                      font-size: clamp(28px, 3vw, 35px); // 移动端~桌面自适应
                  }
-
                  // 标题
                  .li_title {
                      font-weight: bold;

@@ -20,7 +20,7 @@ function Journalism() {
                     </div>
                     <p className='l_title L'>{item.date} {item.title}</p>
                     <p className='s_title S'>{item.description}</p>
-                    <div className='more'>{item.date} · 阅读全文 →</div>
+                    <div className='more'>{item.date} · 阅读全文→</div>
                 </div>
             </div>
         ),
