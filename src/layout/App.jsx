@@ -79,8 +79,7 @@ function App() {
   };
 
   const Contentstyle = {
-    display: 'flex',
-    flexDirection: 'column',
+    flex: '0 0 auto',   // 新增：禁止伸缩，高度由内容撑开
   };
 
   return (
