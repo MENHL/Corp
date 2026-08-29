@@ -1,10 +1,11 @@
 import './style/medical.scss'
-import financial from '../data/financial.json'
+import financial from '../data/caseData.json'
 /* 金融组件 */
 function c_Financial() {
+    const data = financial.financial
     return (
         <>
-            {financial.map((item) => (
+            {data.map((item) => (
                 <li key={item.id} className="item">
                     {/* 图片 */}
                     <div className="case-img">

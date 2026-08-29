@@ -1,10 +1,11 @@
 import './style/medical.scss'
-import medical from '../data/medical.json'
+import Medical from '../data/caseData.json'
 
 function CAll() {
+    const data = Medical.medical
     return (
         <>
-            {medical.map((item) => (
+            {data.map((item) => (
                 <li key={item.id} className="item">
                     {/* 图片 */}
                     <div className="case-img">

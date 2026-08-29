@@ -1,10 +1,11 @@
 import './style/medical.scss'
-import Retail from '../data/retail.json'
+import Retail from '../data/caseData.json'
 
 function c_Retail() {
+    const data = Retail.retail
     return (
         <>
-            {Retail.map((item) => (
+            {data.map((item) => (
                 <li key={item.id} className="item">
                     {/* 图片 */}
                     <div className="case-img">

@@ -1,16 +1,16 @@
 import './style/medical.scss'
-import Education from '../data/education.json'
+import Education from '../data/caseData.json'
 
 function c_Education() {
+    const data = Education.education
     return (
         <>
-            {Education.map((item) => (
-                <li key={item.id} className="item">
-                    {/* 图片 */}
+            {data.map((item) => (
+                // 注意：不同分类的 id 可能重复（都有 1~4），建议使用 index 或组合键
+                <li key={`${item.category}-${item.id}`} className="item">
                     <div className="case-img">
                         <img src={item.src} alt={item.category} />
                     </div>
-                    {/* 标题 */}
                     <ul className="case-title">
                         <li className="li li-box">{item.category}</li>
                         <li className="li li-name">{item.name}</li>

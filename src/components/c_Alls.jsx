@@ -1,16 +1,18 @@
 import './style/medical.scss'
-import Alls from '../data/Alls.json'
+import Alls from '../data/caseData.json'   // 导入整个对象
 
 function c_Alls() {
+    // 取全部数据数组（也可替换为 Alls.financial 等）
+    const data = Alls.alls
+
     return (
         <>
-            {Alls.map((item) => (
-                <li key={item.id} className="item">
-                    {/* 图片 */}
+            {data.map((item) => (
+                // 注意：不同分类的 id 可能重复（都有 1~4），建议使用 index 或组合键
+                <li key={`${item.category}-${item.id}`} className="item">
                     <div className="case-img">
                         <img src={item.src} alt={item.category} />
                     </div>
-                    {/* 标题 */}
                     <ul className="case-title">
                         <li className="li li-box">{item.category}</li>
                         <li className="li li-name">{item.name}</li>
