@@ -11,8 +11,8 @@
         align-content: stretch; // 让两行在交叉轴上拉伸，各占一半高度
 
         .product_item {
-            width: clamp(200px, 31vw, 588px);
-            height: clamp(120px, 18vw, 230px);
+            width: clamp(200px, 30vw, 588px);
+            height: clamp(120px, 22vw, 230px);
             padding: clamp(6px, 1vw, 28px);
             background-color: #fff;
             border-radius: var(--b-radius);
@@ -36,19 +36,20 @@
                 display: flex;
                 align-items: center;
 
-                .bg-cion {
+                .bg-icon {
                     width: clamp(40px, 5vw, 60px);
                     height: clamp(40px, 5vw, 60px);
-                    line-height: clamp(40px, 5vw, 60px);
-                    text-align: center;
                     border-radius: 20%;
                     background-color: var(--bg--color03);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
-            }
 
-            // icon图标
-            .icon {
-                font-size: clamp(16px, 3vw, 35px); // 移动端~桌面自适应
+                // icon图标
+                .icon {
+                    font-size: clamp(14px, 5vw, 35px); // 移动端~桌面自适应
+                }
             }
 
             // 大标题
@@ -93,10 +94,8 @@
                     align-items: center;
 
                     .bg-icon {
-                        width: 60px;
-                        height: 60px;
-                        line-height: 60px;
-                        text-align: center;
+                        width: clamp(50px, 5vw, 60px);
+                        height: clamp(50px, 5vw, 60px);
                         border-radius: 20%;
                         background-color: var(--bg--color03);
                     }

@@ -6,9 +6,9 @@ import './style/Hamburg.scss'
 function Hamburg() {
     return (
         <div id="list">
-            <span className="item"></span>
-            <span className="item"></span>
-            <span className="item"></span>
+            <span className="it"></span>
+            <span className="it"></span>
+            <span className="it"></span>
         </div>
     )
 }

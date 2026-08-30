@@ -23,6 +23,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 隐藏浏览器自带的滚动条 */
+/* 针对 WebKit 内核（Chrome、Edge、Safari） */
+html::-webkit-scrollbar {
+  display: none !important;
+  /* 隐藏滚动条 */
+}
+
+/* 针对 Firefox */
+html {
+  scrollbar-width: none !important;
+  /* 隐藏滚动条 */
+}
+
+/* 针对 IE / Edge 旧版 */
+html {
+  -ms-overflow-style: none !important;
+  /* 隐藏滚动条 */
+}
+
 * {
   margin: 0;
   padding: 0;

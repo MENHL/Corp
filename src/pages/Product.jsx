@@ -69,7 +69,9 @@ function Product() {
                 {productList.map((item) => (
                     <li className="product_item" key={item.id}>
                         <div className="p-list">
-                            <div className="bg-icon icon">{item.icon}</div>
+                            <div className='bg-icon '>
+                                <div className="icon">{item.icon}</div>
+                            </div>
                         </div>
                         <div className="p-list title">{item.title}</div>
                         <div className="p-list subhead">{item.description}</div>

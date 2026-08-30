@@ -1,12 +1,12 @@
 import { useState, useEffect, useLayoutEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Outlet, useLocation, Link } from 'react-router-dom';
-import './App.css'
-import Logo from '../components/Home/Logo'
-import Meun from '../components/Home/Meun'
-import Footers from '../components/footer/footer'
-import Hamburg from '../components/mobile/Hamburg'
-import MobileDrawer from '../components/mobile/Drawer'
+import './App.css';
+import Logo from '../components/Home/Logo';
+import Meun from '../components/Home/Meun';
+import Footers from '../components/footer/footer';
+import Hamburg from '../components/mobile/Hamburg';
+import MobileDrawer from '../components/mobile/Drawer';
 import { Layout, Row, Col, Button } from 'antd';
 
 function App() {
@@ -32,33 +32,27 @@ function App() {
 
   // ========== 滚动到顶部（适配所有容器） ==========
   useLayoutEffect(() => {
-    // 使用 requestAnimationFrame 确保在浏览器下一帧绘制前执行
     const rafId = requestAnimationFrame(() => {
-      // 1. 滚动 window
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
-      // 2. 滚动 .content 容器（如果有内部滚动）
       const contentEl = document.querySelector('.content');
       if (contentEl) {
         contentEl.scrollTop = 0;
         contentEl.scrollLeft = 0;
       }
 
-      // 3. 滚动 antd 的 Layout Content
       const layoutContent = document.querySelector('.ant-layout-content');
       if (layoutContent) {
         layoutContent.scrollTop = 0;
         layoutContent.scrollLeft = 0;
       }
 
-      // 4. 滚动其他可能的主容器
       const mainEl = document.querySelector('main');
       if (mainEl) {
         mainEl.scrollTop = 0;
         mainEl.scrollLeft = 0;
       }
 
-      // 5. 强制重置 html/body 滚动（防止某些浏览器兼容问题）
       document.documentElement.scrollTop = 0;
       document.documentElement.scrollLeft = 0;
       document.body.scrollTop = 0;
@@ -67,6 +61,43 @@ function App() {
 
     return () => cancelAnimationFrame(rafId);
   }, [location.pathname]);
+
+  // ========== 【新增】强制隐藏所有滚动条（终极方案） ==========
+  useLayoutEffect(() => {
+    const style = document.createElement('style');
+    style.id = 'force-hide-scrollbars';
+    style.innerHTML = `
+      /* Chrome / Edge / Safari */
+      *::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        background: transparent !important;
+      }
+      /* Firefox */
+      * {
+        scrollbar-width: none !important;
+      }
+      /* IE / Edge 旧版 */
+      * {
+        -ms-overflow-style: none !important;
+      }
+      /* 对项目中可能产生滚动的容器再次加强 */
+      .ant-layout-content::-webkit-scrollbar,
+      .ant-layout::-webkit-scrollbar,
+      #app::-webkit-scrollbar,
+      .content::-webkit-scrollbar,
+      .case-box::-webkit-scrollbar {
+        display: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      const el = document.getElementById('force-hide-scrollbars');
+      if (el) el.remove();
+    };
+  }, []);
 
   const Headerstyle = {
     height: '65px',
@@ -79,31 +110,39 @@ function App() {
   };
 
   const Contentstyle = {
-    flex: '0 0 auto',   // 新增：禁止伸缩，高度由内容撑开
+    flex: '0 0 auto',
   };
 
   return (
-    <Layout id='app' style={{ minHeight: '100vh' }}>
-      <Header className='header' style={Headerstyle}>
-        <Row wrap={false} className='banner f h-full flex justify-between items-center'>
+    <Layout id="app" style={{ minHeight: '100vh' }}>
+      <Header className="header" style={Headerstyle}>
+        <Row
+          wrap={false}
+          className="banner f h-full flex justify-between items-center"
+        >
           <Col flex="100px">
             <Logo />
           </Col>
           <Col flex="auto">
-            <div className='hidden md:block h-full justify-center items-center'>
+            <div className="hidden md:block h-full justify-center items-center">
               <Meun />
             </div>
           </Col>
-          <Col className='drawer'>
-            <div className='hidden md:block'>
+          <Col className="drawer">
+            <div className="hidden md:block">
               <Link to="/contact">
                 <Button color="default" variant="solid">
                   联系我们
                 </Button>
               </Link>
             </div>
-            <div className='block md:hidden drawer'>
-              <Button className='Hamburg' onClick={showDrawer} color="default" variant="solid">
+            <div className="block md:hidden drawer">
+              <Button
+                className="Hamburg"
+                onClick={showDrawer}
+                color="default"
+                variant="solid"
+              >
                 <Hamburg />
               </Button>
             </div>
@@ -114,8 +153,8 @@ function App() {
       <Content style={Contentstyle}>
         <Outlet />
       </Content>
-      <Footer className='footer'>
-        <div className='banner f'>
+      <Footer className="footer">
+        <div className="banner f">
           <Footers />
         </div>
       </Footer>

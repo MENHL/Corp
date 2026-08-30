@@ -1,53 +1,68 @@
+<div align="center">
+<img src="public/favicon.svg" width="120" alt="React NovaCorp Logo"/>
+
 # React  Corp · 企业官网（B2B）
 
-![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
-![Ant Design](https://img.shields.io/badge/Ant_Design-6-1677ff?logo=antdesign&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06b6d4?logo=tailwindcss&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-7-ca4245?logo=reactrouter&logoColor=white)
+**基于 React 19 + Vite 8 构建的响应式 B2B 企业门户**
+
+[预览演示](https://your-domain.com) · [Gitee 仓库](https://gitee.com/rainbow-under-the-sunshine/react_corp) · [GitHub 仓库](https://github.com/your-username/react-novacorp)
+
+![React](https://img.shields.io/badge/React-19-61dafb?logo=react\&logoColor=white)
+
+![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite\&logoColor=white)
+
+![Ant Design](https://img.shields.io/badge/Ant_Design-6-1677ff?logo=antdesign\&logoColor=white)
+
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06b6d4?logo=tailwindcss\&logoColor=white)
+
+![React Router](https://img.shields.io/badge/React_Router-7-ca4245?logo=reactrouter\&logoColor=white)
+
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
+
 ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
+
 ![Version](https://img.shields.io/badge/version-0.0.0-blue.svg)
+
+---
 
 ## 📖 项目简介
 
-**React NovaCorp** 是一个基于 **React 19 + Vite 8** 构建的响应式 B2B 企业官网，面向企业客户展示公司形象、产品服务、解决方案与客户案例，并提供新闻动态、地图位置与在线联系等能力，帮助企业建立专业、可信的线上门户。
+**React Corp** 是一个基于 **React 19 + Vite 8** 构建的响应式 B2B 企业官网，面向企业客户展示公司形象、产品服务、解决方案与客户案例，并提供新闻动态、地图位置与在线联系等能力，帮助企业建立专业、可信的线上门户。
 
-> 💡 项目简介与功能特性基于依赖与页面结构推断，具体业务功能以项目实际为准。
+## 🔗 线上地址与代码仓库
 
-## 🔗 线上地址
-
-- **官网地址**：<https://your-domain.com>
-- **预览地址**：<https://your-domain.com>
+- **预览地址**：<>
+- **Gitee 仓库**：<https://gitee.com/rainbow-under-the-sunshine/react_corp>
+- **GitHub 仓库**：<https://github.com/MENHL/React_Corp)>
 
 ## 🛠 技术栈
 
 ### 核心依赖
 
-| 依赖 | 版本 | 说明 |
-| --- | --- | --- |
-| [React](https://react.dev/) | ^19.2.8 | 用户界面构建库 |
-| [React DOM](https://react.dev/) | ^19.2.8 | React 的 DOM 渲染器 |
-| [React Router DOM](https://reactrouter.com/) | ^7.18.2 | 前端路由（SPA 多页面导航） |
-| [Ant Design](https://ant.design/index-cn) | ^6.6.1 | 企业级 UI 组件库 |
-| [@ant-design/icons](https://ant.design/components/icon-cn) | ^6.3.2 | Ant Design 图标库 |
-| [axios](https://axios-http.com/zh/) | ^1.20.0 | HTTP 请求库（对接后端接口） |
-| [Leaflet](https://leafletjs.com/) / [React-Leaflet](https://react-leaflet.js.org/) | ^1.9.4 / ^5.0.0 | 轻量级开源地图（位置展示） |
-| [dayjs](https://day.js.org/zh-CN/) | ^1.11.23 | 轻量日期处理库 |
-| [react-responsive](https://github.com/yocontra/react-responsive) | ^10.0.1 | 响应式布局（PC / 移动端适配） |
-| [Sass](https://sass-lang.com/) | ^1.103.1 | CSS 预处理器 |
+| 依赖                                                                                 | 版本              | 说明                |
+| ---------------------------------------------------------------------------------- | --------------- | ----------------- |
+| [React](https://react.dev/)                                                        | ^19.2.8         | 用户界面构建库           |
+| [React DOM](https://react.dev/)                                                    | ^19.2.8         | React 的 DOM 渲染器   |
+| [React Router DOM](https://reactrouter.com/)                                       | ^7.18.2         | 前端路由（SPA 多页面导航）   |
+| [Ant Design](https://ant.design/index-cn)                                          | ^6.6.1          | 企业级 UI 组件库        |
+| [@ant-design/icons](https://ant.design/components/icon-cn)                         | ^6.3.2          | Ant Design 图标库    |
+| [axios](https://axios-http.com/zh/)                                                | ^1.20.0         | HTTP 请求库（对接后端接口）  |
+| [Leaflet](https://leafletjs.com/) / [React-Leaflet](https://react-leaflet.js.org/) | ^1.9.4 / ^5.0.0 | 轻量级开源地图（位置展示）     |
+| [dayjs](https://day.js.org/zh-CN/)                                                 | ^1.11.23        | 轻量日期处理库           |
+| [react-responsive](https://github.com/yocontra/react-responsive)                   | ^10.0.1         | 响应式布局（PC / 移动端适配） |
+| [Sass](https://sass-lang.com/)                                                     | ^1.103.1        | CSS 预处理器          |
 
 ### 开发依赖
 
-| 依赖 | 版本 | 说明 |
-| --- | --- | --- |
-| [Vite](https://cn.vitejs.dev/) | ^8.2.0 | 下一代前端构建工具 |
-| [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react) | ^6.0.4 | Vite React 插件（Fast Refresh） |
-| [Tailwind CSS](https://tailwindcss.com/) | ^4.3.3 | 原子化 CSS 框架（`@tailwindcss/vite`） |
-| [ESLint](https://eslint.org/) | ^10.8.0 | 代码规范检查 |
-| eslint-plugin-react-hooks | ^7.1.1 | Hooks 规则检查 |
-| eslint-plugin-react-refresh | ^0.5.3 | 组件热更新规范检查 |
-| @types/react / @types/react-dom | ^19.x | TypeScript 类型定义 |
+| 依赖                                                                  | 版本      | 说明                              |
+| ------------------------------------------------------------------- | ------- | ------------------------------- |
+| [Vite](https://cn.vitejs.dev/)                                      | ^8.2.0  | 下一代前端构建工具                       |
+| [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react) | ^6.0.4  | Vite React 插件（Fast Refresh）     |
+| [Tailwind CSS](https://tailwindcss.com/)                            | ^4.3.3  | 原子化 CSS 框架（`@tailwindcss/vite`） |
+| [ESLint](https://eslint.org/)                                       | ^10.8.0 | 代码规范检查                          |
+| eslint-plugin-react-hooks                                           | ^7.1.1  | Hooks 规则检查                      |
+| eslint-plugin-react-refresh                                         | ^0.5.3  | 组件热更新规范检查                       |
+| @types/react / @types/react-dom                                     | ^19.x   | TypeScript 类型定义                 |
 
 ## ✨ 功能特性
 
@@ -73,9 +88,12 @@
 ### 安装依赖
 
 ```bash
-# 克隆项目
-git clone https://your-repo-url.git
-cd react-novacorp
+# 克隆项目（Gitee）
+git clone https://gitee.com/rainbow-under-the-sunshine/react_corp.git
+cd react_corp
+
+# 或从 GitHub 克隆（请替换为实际仓库地址）
+# git clone https://github.com/your-username/react-novacorp.git
 
 # 安装依赖
 npm install
@@ -102,12 +120,12 @@ npm run preview
 
 在项目根目录执行以下命令：
 
-| 命令 | 说明 |
-| --- | --- |
-| `npm run dev` | 启动 Vite 开发服务器，支持热更新（HMR），用于本地开发调试 |
-| `npm run build` | 执行生产环境构建，打包压缩后输出到 `dist/` 目录，可直接部署至静态服务器 |
-| `npm run lint` | 运行 ESLint 对项目代码进行规范检查 |
-| `npm run preview` | 启动本地静态服务器预览 `dist/` 构建产物，验证生产构建效果 |
+| 命令                | 说明                                       |
+| ----------------- | ---------------------------------------- |
+| `npm run dev`     | 启动 Vite 开发服务器，支持热更新（HMR），用于本地开发调试        |
+| `npm run build`   | 执行生产环境构建，打包压缩后输出到 `dist/` 目录，可直接部署至静态服务器 |
+| `npm run lint`    | 运行 ESLint 对项目代码进行规范检查                    |
+| `npm run preview` | 启动本地静态服务器预览 `dist/` 构建产物，验证生产构建效果        |
 
 ## 📁 项目结构
 
@@ -157,9 +175,12 @@ react-novacorp/
 
 欢迎参与项目共建！
 
-1. 发起 Pull Request 并描述清楚改动内容
+1. 发起 Pull Request 并描述清楚改动内容（Gitee / GitHub 均可）
 
-如发现 Bug 或有功能建议，请提交 [Issue](https://your-repo-url/issues)。
+如发现 Bug 或有功能建议，请提交 Issue：
+
+- Gitee：<https://gitee.com/rainbow-under-the-sunshine/react_corp/issues>
+- GitHub：<https://github.com/your-username/react-novacorp/issues>（占位链接，请替换为实际仓库地址）
 
 ## 📄 许可证
 
