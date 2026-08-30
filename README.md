@@ -30,7 +30,7 @@
 ## 🔗 线上地址与代码仓库
 
 - **Gitee 仓库**：<https://gitee.com/rainbow-under-the-sunshine/react_corp>
-- **GitHub 仓库**：<https://github.com/MENHL/React_Corp)>
+- **GitHub 仓库**：<https://github.com/MENHL/React_Corp>
 
 ## 🛠 技术栈
 
