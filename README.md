@@ -1,6 +1,7 @@
- <div  style="align:center;">
-  <img src="public/favicon.svg" width="80" alt="React Corp Logo"/>
+ <div  style="align:center;">  
+  <img src="public/favicon.svg" width="80" alt="React Corp Logo"/>  
  </div>
+
 
 # React  Corp · 企业官网（B2B）
 
