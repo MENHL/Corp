@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createHashRouter, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 import App from '../layout/App';               // 根布局组件
 // 懒加载
@@ -24,7 +24,7 @@ const Retail = lazy(() => import('../components/c_Retail'));
 // 零售
 const Education = lazy(() => import('../components/c_Education'));
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         Component: App,
