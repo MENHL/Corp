@@ -1,5 +1,4 @@
-<div align="center">
-<img src="public/favicon.svg" width="120" alt="React NovaCorp Logo"/>
+<img src="public/favicon.svg" width="80" alt="React Corp Logo"/>
 
 # React  Corp · 企业官网（B2B）
 
