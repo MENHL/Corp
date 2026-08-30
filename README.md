@@ -1,8 +1,6 @@
- <div  style="align:center;">  
+ <div style="align:center;">  
   <img src="public/favicon.svg" width="80" alt="React Corp Logo"/>  
  </div>
-
-
 # React  Corp · 企业官网（B2B）
 
 **基于 React 19 + Vite 8 构建的响应式 B2B 企业门户**
