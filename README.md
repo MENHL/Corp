@@ -1,4 +1,4 @@
- <div style="align:center;">  
+<div style="text-align:center;">
   <img src="public/favicon.svg" width="80" alt="React Corp Logo"/>  
  </div>
 # React  Corp · 企业官网（B2B）
@@ -29,7 +29,6 @@
 
 ## 🔗 线上地址与代码仓库
 
-- **预览地址**：<>
 - **Gitee 仓库**：<https://gitee.com/rainbow-under-the-sunshine/react_corp>
 - **GitHub 仓库**：<https://github.com/MENHL/React_Corp)>
 
