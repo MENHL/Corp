@@ -4,8 +4,6 @@
 # React  Corp · 企业官网（B2B）
 
 **基于 React 19 + Vite 8 构建的响应式 B2B 企业门户**
-[预览演示](https://your-domain.com) · [Gitee 仓库](https://gitee.com/rainbow-under-the-sunshine/react_corp) · [GitHub 仓库](https://github.com/your-username/react-novacorp)
-
 ![React](https://img.shields.io/badge/React-19-61dafb?logo=react\&logoColor=white)
 
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite\&logoColor=white)
