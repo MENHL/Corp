@@ -25,7 +25,7 @@ function CaseCategory() {
                     <div className="case-img">
                         <img
                             /* 👇 这里做了容错处理：如果 item.src 开头有 / 会自动去掉 */
-                            src={`${import.meta.env.BASE_URL}${item.src.replace(/^\//, '')}`}
+                             src={`${import.meta.env.BASE_URL}${item.src.replace(/^\//, '')}`}
                             alt={item.category}
                         />
                     </div>

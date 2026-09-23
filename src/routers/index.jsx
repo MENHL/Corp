@@ -14,7 +14,7 @@ const Contact = lazy(() => import('../components/Contact'));
 const DemonStration = lazy(() => import('../components/DemonStration'));
 // 案例里面的路由
 
-const CaseCategorys = lazy(() => import('../components/CaseCategory'));
+import CaseCategorys from "../components/CaseCategory"
 
 const router = createBrowserRouter([
     {
@@ -55,8 +55,8 @@ const router = createBrowserRouter([
                 name: "case",
                 Component: Case,
                 children: [
-                   { path: ":category", element: <CaseCategorys /> }
-                   
+                    { index: true, element: <Navigate to="alls" replace /> },
+                    { path: ":category", element: <CaseCategorys /> }
                 ]
             },
             {
@@ -71,8 +71,6 @@ const router = createBrowserRouter([
             },
         ],
     },
-], {
-    basename: import.meta.env.BASE_URL // 自动读取 vite.config.js 里的 base 值
-});
+]);
 
 export default router;

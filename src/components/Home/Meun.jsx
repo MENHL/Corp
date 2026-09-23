@@ -5,7 +5,7 @@ import { Menu } from 'antd';
 const items = [
     { label: '首页', key: 'home' },
     { label: '产品', key: 'product' },
-    { label: '案例', key: 'case' },
+    { label: '案例', key: 'case/alls' },
     { label: '关于', key: 'regards' },
     { label: '新闻', key: 'journalism' },
 ];
