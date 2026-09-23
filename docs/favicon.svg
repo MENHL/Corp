@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2c3138"/>
+      <stop offset="1" stop-color="#14161a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 深色圆角底 -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg)"/>
+
+  <!-- 顶部微光，增加质感 -->
+  <rect x="2" y="2" width="60" height="30" rx="14" fill="#ffffff" opacity="0.05"/>
+
+  <!-- C 字母章（Corp 首字母，圆头笔画） -->
+  <path d="M 43.15 23.96 A 15 15 0 1 0 43.15 44.04"
+        fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- 节点圆点：象征 B2B 企业间的连接 -->
+  <circle cx="48.5" cy="34" r="3.5" fill="#ffffff"/>
+</svg>
