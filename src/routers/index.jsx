@@ -13,16 +13,8 @@ const Contact = lazy(() => import('../components/Contact'));
 // 预约演示
 const DemonStration = lazy(() => import('../components/DemonStration'));
 // 案例里面的路由
-// 全部
-const Alls = lazy(() => import('../components/c_Alls'));
-// 金融
-const Finance = lazy(() => import('../components/c_Financial'));
-// 医疗
-const Medical = lazy(() => import('../components/c_Medical'));
-// 教育
-const Retail = lazy(() => import('../components/c_Retail'));
-// 零售
-const Education = lazy(() => import('../components/c_Education'));
+
+const CaseCategorys = lazy(() => import('../components/CaseCategory'));
 
 const router = createBrowserRouter([
     {
@@ -63,12 +55,8 @@ const router = createBrowserRouter([
                 name: "case",
                 Component: Case,
                 children: [
-                    { index: true, element: <Alls /> },           // 默认 /case 显示全部
-                    { path: "alls", element: <Alls /> },          // /case/alls
-                    { path: "finance", element: <Finance /> },    // /case/finance
-                    { path: "medical", element: <Medical /> },    // /case/medical
-                    { path: "education", element: <Education /> }, // /case/education（教育）
-                    { path: "retail", element: <Retail /> },      // /case/retail（零售）
+                   { path: ":category", element: <CaseCategorys /> }
+                   
                 ]
             },
             {
