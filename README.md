@@ -26,7 +26,7 @@
 **React Corp** 是一个基于 **React 19 + Vite 8** 构建的响应式 B2B 企业官网，面向企业客户展示公司形象、产品服务、解决方案与客户案例，并提供新闻动态、地图位置与在线联系等能力，帮助企业建立专业、可信的线上门户。
 
 ## 🔗 线上地址与代码仓库
-
+- **线上预览：**：https://we3y07nu4-corp-34dg2xc.maozi.io/home
 - **Gitee 仓库**：<https://gitee.com/rainbow-under-the-sunshine/react_corp>
 - **GitHub 仓库**：<https://github.com/MENHL/React_Corp>
 
