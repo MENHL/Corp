@@ -83,6 +83,8 @@ const router = createBrowserRouter([
             },
         ],
     },
-]);
+], {
+    basename: import.meta.env.BASE_URL // 自动读取 vite.config.js 里的 base 值
+});
 
 export default router;
